@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-import java.util.List;
 import java.util.Objects;
 
-public class Wheel implements Cloneable{
+public class Wheel implements Cloneable {
     private int radius;
 
     public Wheel(int radius) {
@@ -43,7 +42,7 @@ public class Wheel implements Cloneable{
     @Override
     public String toString() {
         return "Wheel{"
-            + "radius=" + radius
-            + '}';
+                + "radius=" + radius
+                + '}';
     }
 }

@@ -31,12 +31,11 @@ public final class Car {
 
     public List<Wheel> getWheels() {
         List<Wheel> newWheels = new ArrayList<>(wheels.size());
-            for (Wheel wheels : wheels) {
-                newWheels.add(wheels.clone());
-            }
-            return newWheels;
+        for (Wheel wheels : wheels) {
+            newWheels.add(wheels.clone());
         }
-
+        return newWheels;
+    }
 
     public Engine getEngine() {
         if (engine == null) {
@@ -48,10 +47,12 @@ public final class Car {
     public Car changeEngine(Engine engine) {
         return new Car(year, color, new ArrayList<>(wheels), engine);
     }
+
     public Car changeColor(String newColor) {
         return new Car(year, newColor, new ArrayList<>(wheels), engine);
     }
-    public Car addWheel (Wheel newWheel) {
+
+    public Car addWheel(Wheel newWheel) {
         List<Wheel> oldWheel = new ArrayList<>(wheels);
         oldWheel.add(newWheel);
         return new Car(year, color, oldWheel, engine);
@@ -75,10 +76,10 @@ public final class Car {
     @Override
     public String toString() {
         return "Car{"
-            + "year=" + year
-            + ", color='" + color + '\''
-            + ", wheels=" + wheels
-            + ", engine=" + engine
-            + '}';
+                + "year=" + year
+                + ", color='" + color + '\''
+                + ", wheels=" + wheels
+                + ", engine=" + engine
+                + '}';
     }
 }
